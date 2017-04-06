@@ -7,5 +7,12 @@ for (var i = 0; i < links.length; i++) {
 }
 
 function mouseenterFunc() {
-
+    for (var i = 0; i < links.length; i++) {
+        if (links[i].parentNode.classList.contains('active')) {
+            links[i].parentNode.classList.remove('active');
+        }
+        links[i].style.opacity = '0.25';
+    }
+    this.parentNode.classList.add('active');
+    this.style.opacity = '1';
 }
